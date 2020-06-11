@@ -22,29 +22,29 @@ module.exports.FilesTask = (inPath, outPath, delFiles) => {
 		CopyFiles(inPath);
 	});
 
-	const CopyFiles = async (fpath) => {
+	const CopyFiles =  (fpath) => {
 		let files = fs.readdirSync(fpath);
 
-		files.forEach(async (file) => {
+		files.forEach( (file) => {
 			let newPath = path.join(fpath, file);
 			let elmType = fs.statSync(newPath);
 
 			if (elmType.isDirectory()) {
 
-                await CopyFiles(newPath);
+                 CopyFiles(newPath);
                 if (delFiles === "true") 
-                    await fs.rmdir(newPath, (err)=>{});
+                     fs.rmdir(newPath, (err)=>{});
 				return;
 			}
 
-			await FileMove(newPath);
+			 FileMove(newPath);
         });
         if (delFiles === "true") 
-            await fs.rmdir(fpath, (err)=>{});
+             fs.rmdir(fpath, (err)=>{});
 
 	};
 
-	const FileMove = async (file) => {
+	const FileMove =  (file) => {
 		let name = path.parse(file).base;
 		let dirToCopy = name.charAt(0).toUpperCase();
 		try {
@@ -54,17 +54,17 @@ module.exports.FilesTask = (inPath, outPath, delFiles) => {
 			if (!fs.existsSync(dirToCopy)) fs.mkdirSync(dirToCopy);
 
 			if (fs.existsSync(destFilePath)) {
-				await fs.unlink(destFilePath, (err) => {
+				 fs.unlink(destFilePath, (err) => {
 					if (err) console.log(">2", err);
 				});
 			}
 
 			if (delFiles !== "true") {
-				await fs.link(file, destFilePath, (err) => {
+				 fs.copyFile(file, destFilePath, (err) => {
 					if (err) console.log(">2", err);
 				});
 			} else {
-				await fs.rename(file, destFilePath, (err) => {
+				 fs.rename(file, destFilePath, (err) => {
 					if (err) console.log(">1", err);
 				});
 			}
