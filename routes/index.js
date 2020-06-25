@@ -1,37 +1,20 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const validator = require('../libs/validation');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  const skills = [
-    {
-      "number": 12,
-      "text": "Возраст начала занятий на скрипке"
-    },
-    {
-      "number": 76,
-      "text": "Концертов отыграл"
-    },
-    {
-      "number": 30,
-      "text": "Максимальное число городов в туре"
-    },
-    {
-      "number": 20,
-      "text": "Лет на сцене в качестве скрипача"
-    }
-  ]
-  res.render('pages/index', { skills });
-});
+const controllerlHome = require('../controllers/indexController');
+const controllerlLogin = require('../controllers/loginController');
+const controllerAdmin = require('../controllers/adminController');
 
-/* GET home page. */
-router.get('/login', function(req, res, next) {
-  res.render('pages/login', { title: 'Express' });
-});
+router.get('/', controllerlHome.get);
+router.post('/', controllerlHome.email);
 
-/* GET home page. */
-router.get('/admin', function(req, res, next) {
-  res.render('pages/admin', { title: 'Express' });
-});
+router.get('/login', controllerlLogin.get);
+router.post('/login', validator.loginValidation, controllerlLogin.post);
+
+router.get('/admin', controllerAdmin.get);
+ router.post('/admin/skills', validator.skillsValidation, controllerAdmin.postSkills);
+ router.post('/admin/upload', validator.productsValidation, controllerAdmin.postProducts);
+
 
 module.exports = router;

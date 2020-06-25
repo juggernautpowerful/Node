@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "src": "img\\2420369e-b895-4f81-b650-dc388ae6b91e\\photo\\novoe_selo_u_cerkvi_1937-thumb.jpg",
+      "name": "title",
+      "price": "15"
+    },
+    {
+      "src": "img\\2a80b729-e10b-4121-83f8-518c7ad61707\\photo\\novoe_selo_u_cerkvi_1937-thumb.jpg",
+      "name": "ttiittll",
+      "price": "20"
+    },
+    {
+      "src": "img\\c2e1cf53-0129-4cb4-9ef0-56021272b254\\photo\\novoe_selo_u_cerkvi_1937-thumb.jpg",
+      "name": "dfgf",
+      "price": ""
+    },
+    {
+      "src": "img\\286e1922-f377-4d4d-bb9c-b3c72e7fced0\\photo\\novoe_selo_u_cerkvi_1937-thumb.jpg",
+      "name": "",
+      "price": ""
+    }
+  ],
+  "user": {
+    "email": "no@no.ru",
+    "hash": "430ceb4988cfb06de1731098fbd3622a8d380ab3d5664771d488e65827803206705a8675addfe0f0cc43c79e0433c3693248e02710bdcc9113c0ac748ea0cdfabc5f6275c33813eba953a08c0db041be097195b7ae1e17443009f0f5095e8f872a72e919a17364652b4388d35802213daef81da0df2fe70df07f5bc6d450646ae37d2b8ea2772f7921f20b948ebb55a45b119eaca0b2ac884f9992e9a6895f17c3a5f94845f76c36b1324f1f102135712b31bd9feaf89a9817c134e4d5304f9ef3a6087556ddcf99339e46d910cc38df87118f6cb285263111b580dac1cb5015e05d237628206657288166bbd024f42ebbf64a9b0c70b73847ac633c257bca1b01db419f7fbed6c89add17e01bfde4afdbb1daf898f2780d246237fba9bbdf4a2cfce26eda731d8feb02f9df50fc48072dded548fd1c2fc5d3884217dfd532eb7f9c3200e17b779b0e9cc088ed5e0f9b4a743b8fa5d617431f042a905bf5cd50d57a63f493529be97fc41fffaf40f42fc144898579717439bb2a3ecaafe7278311916449cd2b9b72155d8c04a9f562627f831bc58237b0670c050cdef531abc605fb80d8c5db6cf22bcd80bc5083d53c976ff6b19394dfae558e1059461574d587259448388a34b7449cf93b145225600fd844925af8187ecfcf4dd95d4e41f16b4caac3a85a85a7da738d87b80118b83ddab618e02f2ad1cc4ee657fa878b83",
+    "salt": "47239c7f3a03e6bcff3a6df5687de5d9"
+  },
+  "skills": {
+    "age": "2",
+    "concerts": "2",
+    "cities": "",
+    "years": ""
+  }
+}

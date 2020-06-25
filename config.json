@@ -1,0 +1,11 @@
+  {
+    "session": {
+      "key": "express:sess",
+      "secret":"!!!!",
+      "maxAge": 86400000,
+      "overwrite": true,
+      "httpOnly": true,
+      "signed": false
+    },
+    "upload": "./public/upload"
+  }
